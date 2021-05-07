@@ -47,10 +47,10 @@ def move(): #funcion que da movimiento a los objetivos y a la pelota
         targets.append(target)
 
     for target in targets:
-        target.x -= 0.5 #velocidad de los objetivos
+        target.x -= 1 #velocidad de los objetivos
 
     if inside(ball):
-        speed.y -= 0.35 #velocidad del proyectil
+        speed.y -= 0.85 #velocidad del proyectil
         ball.move(speed)
 
     dupe = targets.copy()
