@@ -52,7 +52,7 @@ def move(): #funcion que da movimiento a los objetivos y a la pelota
     if inside(ball):
         speed.y -= 0.85 #velocidad del proyectil
         ball.move(speed)
-
+# La velocidad se cambió, pero no hicimos una variación tan grande, pues aumenta demasiado la complejidad del juego.
     dupe = targets.copy()
     targets.clear()
 
@@ -64,7 +64,8 @@ def move(): #funcion que da movimiento a los objetivos y a la pelota
 
     for target in targets:
         if not inside(target):
-            return
+            target.x += 400   #Esto regresa los objetivos al punto de salida. El tablero va de -200 a 200 en x
+ 
 
     ontimer(move, 50)
 
